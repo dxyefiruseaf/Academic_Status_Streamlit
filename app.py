@@ -26,69 +26,105 @@ st.set_page_config(
 # ── Custom CSS ────────────────────────────────────────────────────────────────
 st.markdown("""
 <style>
-    .main { background: #0f1117; }
-    .stApp { background: linear-gradient(135deg, #0f1117 0%, #1a1d2e 100%); }
+    .main { background: #f4f6fb; }
+
+    .stApp { 
+        background: linear-gradient(135deg, #f8f9ff 0%, #eef2ff 100%);
+    }
+
     .metric-card {
-        background: linear-gradient(135deg, #1e2235 0%, #252840 100%);
-        border: 1px solid #3d4166;
-        border-radius: 12px;
+        background: white;
+        border: 1px solid #e3e8ff;
+        border-radius: 14px;
         padding: 20px;
         text-align: center;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        box-shadow: 0 6px 18px rgba(100, 108, 255, 0.08);
     }
+
     .metric-value {
         font-size: 2.5rem;
         font-weight: 800;
-        background: linear-gradient(135deg, #6c63ff, #48cae4);
+        background: linear-gradient(135deg, #4f46e5, #06b6d4);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
     .metric-label {
         font-size: 0.85rem;
-        color: #8892b0;
+        color: #6b7280;
         margin-top: 4px;
         text-transform: uppercase;
         letter-spacing: 1px;
     }
+
     .status-badge-0 {
-        background: linear-gradient(135deg, #00b894, #00cec9);
-        color: white; border-radius: 20px; padding: 6px 18px;
-        font-weight: 700; font-size: 1rem; display: inline-block;
+        background: linear-gradient(135deg, #22c55e, #06b6d4);
+        color: white;
+        border-radius: 20px;
+        padding: 6px 18px;
+        font-weight: 700;
+        font-size: 1rem;
+        display: inline-block;
+        box-shadow: 0 4px 10px rgba(34,197,94,0.2);
     }
+
     .status-badge-1 {
-        background: linear-gradient(135deg, #fdcb6e, #e17055);
-        color: white; border-radius: 20px; padding: 6px 18px;
-        font-weight: 700; font-size: 1rem; display: inline-block;
+        background: linear-gradient(135deg, #facc15, #fb923c);
+        color: white;
+        border-radius: 20px;
+        padding: 6px 18px;
+        font-weight: 700;
+        font-size: 1rem;
+        display: inline-block;
+        box-shadow: 0 4px 10px rgba(250,204,21,0.2);
     }
+
     .status-badge-2 {
-        background: linear-gradient(135deg, #d63031, #b2bec3);
-        color: white; border-radius: 20px; padding: 6px 18px;
-        font-weight: 700; font-size: 1rem; display: inline-block;
+        background: linear-gradient(135deg, #ef4444, #f43f5e);
+        color: white;
+        border-radius: 20px;
+        padding: 6px 18px;
+        font-weight: 700;
+        font-size: 1rem;
+        display: inline-block;
+        box-shadow: 0 4px 10px rgba(239,68,68,0.2);
     }
+
     .predict-btn > button {
-        background: linear-gradient(135deg, #6c63ff 0%, #48cae4 100%) !important;
+        background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%) !important;
         color: white !important;
         border: none !important;
-        border-radius: 10px !important;
+        border-radius: 12px !important;
         font-size: 1.1rem !important;
         font-weight: 700 !important;
-        padding: 0.6rem 2rem !important;
+        padding: 0.7rem 2rem !important;
         width: 100% !important;
+        box-shadow: 0 6px 18px rgba(79,70,229,0.25);
+        transition: all 0.3s ease;
     }
+
+    .predict-btn > button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 22px rgba(79,70,229,0.35);
+    }
+
     .section-header {
         font-size: 1.1rem;
         font-weight: 600;
-        color: #ccd6f6;
-        border-left: 3px solid #6c63ff;
+        color: #374151;
+        border-left: 4px solid #4f46e5;
         padding-left: 10px;
         margin: 16px 0 10px 0;
     }
+
     .info-box {
-        background: #1e2235;
-        border-radius: 8px;
-        padding: 12px 16px;
-        border-left: 4px solid #6c63ff;
-        margin-bottom: 10px;
+        background: white;
+        border-radius: 10px;
+        padding: 14px 18px;
+        border-left: 4px solid #06b6d4;
+        margin-bottom: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        color: #374151;
     }
 </style>
 """, unsafe_allow_html=True)
